@@ -18,7 +18,7 @@ export default function BookingsPage() {
             <AccountNavigation />
             <div>
                 {bookings?.length > 0 && bookings.map(booking => (
-                    <Link to={'/account/bookings/' + booking._id} className="flex my-2 gap-4 rounded-2xl overflow-hidden bg-gray-200">
+                    <Link key={booking._id} to={'/account/bookings/' + booking._id} className="flex my-2 gap-4 rounded-2xl overflow-hidden bg-gray-200">
                         <div className="w-48">
                             <PlaceIMG place={booking.place} />
                         </div>
